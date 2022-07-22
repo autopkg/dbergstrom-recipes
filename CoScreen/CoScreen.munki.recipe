@@ -29,7 +29,7 @@
 			<key>developer</key>
 			<string>CoScreen, Inc.</string>
 			<key>display_name</key>
-			<string>CoScreen</string>
+			<string>CoScreen x86</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
