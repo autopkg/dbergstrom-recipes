@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of CoScreen.</string>
 	<key>Identifier</key>
-	<string>com.github.dwbergstrom.download.CoScreen</string>
+	<string>com.github.dwbergstrom.download.CoScreen-arm64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
