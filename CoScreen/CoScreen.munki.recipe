@@ -20,10 +20,6 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<key>supported_architectures</key>
-            <array>
-                <string>x86_64</string>
-            </array>
 			<key>description</key>
 			<string> </string>
 			<key>developer</key>
@@ -32,6 +28,10 @@
 			<string>CoScreen x86</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+            		<array>
+                		<string>x86_64</string>
+            		</array>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
