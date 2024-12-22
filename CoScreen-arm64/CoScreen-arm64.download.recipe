@@ -20,6 +20,15 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>DeprecationWarning</string>
+			<key>Arguments</key>
+			<dict>
+				<key>warning_message</key>
+				<string>The CoScreen recipes have been consolidated, and this arm64-specific version has been deprecated. Please use the recipes in the CoScreen subfolder, and provide your desired architecture via the ARCH input variable in your override.</string>
+			</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>

@@ -5,27 +5,45 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of CoScreen.</string>
+	<string>Downloads the latest version of CoScreen.
+	
+Use the ARCH input variable to specify which architecture you wish to download. Values include:
+- "x86_64" (default, Intel)
+- "arm64" (Apple Silicon)
+</string>
 	<key>Identifier</key>
 	<string>com.github.dwbergstrom.download.CoScreen</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>CoScreen</string>
-		<key>DOWNLOAD_URL</key>
-		<string>https://update.coscreen.org/CoScreen-current-stable.dmg</string>
+		<key>ARCH</key>
+		<string>x86_64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Processor</key>
+            <string>com.github.homebysix.FindAndReplace/FindAndReplace</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_string</key>
+                <string>https://update.coscreen.org/CoScreen-current-stable-%ARCH%.dmg</string>
+                <key>find</key>
+                <string>-x86_64</string>
+                <key>replace</key>
+                <string></string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-x86.dmg</string>
+				<string>%NAME%-%ARCH%.dmg</string>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>%output_string%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
